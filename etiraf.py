@@ -44,14 +44,14 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni Kullanıcı -** {ad}")
+     await client.send_message(log_qrup, f"ℹ️ **Hoşgeldin -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💭 itiraf yaz", data="itiraf")
+                       Button.inline("🤫 İtiraf Et", data="itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/flexitiraf')],
-                      [Button.url('📣 Support', f'https://t.me/nikeekip'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/b4f2f')]
+                      [Button.url('🔱 İtiraf Kanalı', f'https://t.me/inekitiraf')],
+                      [Button.url('🐄 Grubumuz', f'https://t.me/inekobasiTR'),
+                       Button.url('👤 Sahip', f'https://t.me/uslanmazmurti')]
                     ),
                     link_preview=False)
 
@@ -66,11 +66,11 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💭 İtiraf Yaz", data="itiraf")
+                       Button.inline("🤫 İtiraf Et", data="itiraf")
                       ],
-                      [Button.url('📜 İtiraf Kanalı', f'https://t.me/flexitiraf')],
-                      [Button.url('📣 Support', f'https://t.me/nikeekip'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/b4f2f')]
+                      [Button.url('🔱 İtiraf Kanalı', f'https://t.me/inekitiraf')],
+                      [Button.url('🐄 Grubumuz', f'https://t.me/inekobasiTR'),
+                       Button.url('👤 Sahip', f'https://t.me/uslanmazmurti')]
                     ),
                     link_preview=False)
 
